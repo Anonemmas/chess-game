@@ -13,9 +13,9 @@ import {
   WhiteQueen,
   WhiteRook,
 } from "@components/shared/Pieces";
+import { letters } from "@utils/Letters";
 
 export default function Board() {
-  const letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
   return (
     <div className="w-[660px] h-[663px] relative bg-white outline outline-[8px] outline-[#333333] grid grid-rows-8 grid-cols-8">
       <div className="letters bottom-0 absolute grid grid-cols-8 inset-0 items-end">

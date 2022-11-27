@@ -1,8 +1,8 @@
-import { tableEntries } from "@components/utils/availablegamesConstants";
 import {
   completedTableEntries,
   completedTableHeaders,
-} from "@components/utils/completedGamesConstants";
+} from "@utils/completedGamesConstants";
+import Link from "next/link";
 
 export default function AvailableGames() {
   return (
@@ -14,10 +14,10 @@ export default function AvailableGames() {
               {header}
             </div>
           ))}
-          {completedTableEntries.map((entry) => (
+          {completedTableEntries.map((entry, index) => (
             <div
               className="col-span-full grid grid-cols-7 gap-4 pb-2 pt-3 gap-x-6 border-b border-[#f2f2f2] last:border-b-0 font-semibold"
-              key={entry.id}
+              key={index}
             >
               <div className="col-span-1 self-center">{entry.id}</div>
               <div className="col-span-1 self-center">{entry.limit}</div>
@@ -28,9 +28,12 @@ export default function AvailableGames() {
                 <button className="bg-chess-gray cursor-not-allowed rounded-lg flex items-center px-4 font-semibold py-2 gap-2 text-sm text-white">
                   Request to join
                 </button>
-                <button className="bg-white border border-primary-blue text-primary-blue rounded-lg flex items-center px-8 font-semibold py-2 gap-2 text-sm">
+                <Link
+                  href={`/game/${entry.id}/spectating`}
+                  className="bg-white border border-primary-blue text-primary-blue rounded-lg flex items-center px-8 font-semibold py-2 gap-2 text-sm"
+                >
                   Spectate
-                </button>
+                </Link>
               </div>
             </div>
           ))}

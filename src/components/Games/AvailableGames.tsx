@@ -1,7 +1,5 @@
-import {
-  tableEntries,
-  tableHeaders,
-} from "@components/utils/availablegamesConstants";
+import { tableEntries, tableHeaders } from "@utils/availablegamesConstants";
+import Link from "next/link";
 
 export default function AvailableGames() {
   return (
@@ -13,10 +11,10 @@ export default function AvailableGames() {
               {header}
             </div>
           ))}
-          {tableEntries.map((entry) => (
+          {tableEntries.map((entry, index) => (
             <div
               className="col-span-full grid grid-cols-7 gap-4 pb-2 pt-3 gap-x-6 border-b border-[#f2f2f2] last:border-b-0 font-semibold"
-              key={entry.id}
+              key={index}
             >
               <div className="col-span-1 self-center">{entry.id}</div>
               <div className="col-span-1 self-center">{entry.limit}</div>
@@ -24,12 +22,18 @@ export default function AvailableGames() {
               <div className="col-span-1 self-center">{entry.players}</div>
               <div className="col-span-1 self-center">{entry.date}</div>
               <div className="flex justify-center items-center gap-3 col-span-2">
-                <button className="bg-primary-blue rounded-lg cursor-pointer flex items-center px-4 font-semibold py-2 gap-2 text-sm text-white">
+                <Link
+                  href={`/game/${entry.id}`}
+                  className="bg-primary-blue rounded-lg cursor-pointer flex items-center px-4 font-semibold py-2 gap-2 text-sm text-white"
+                >
                   Request to join
-                </button>
-                <button className="bg-white border border-primary-blue text-primary-blue rounded-lg flex items-center px-8 font-semibold py-2 gap-2 text-sm">
+                </Link>
+                <Link
+                  href={`/game/${entry.id}/spectating`}
+                  className="bg-white border border-primary-blue text-primary-blue rounded-lg flex items-center px-8 font-semibold py-2 gap-2 text-sm"
+                >
                   Spectate
-                </button>
+                </Link>
               </div>
             </div>
           ))}

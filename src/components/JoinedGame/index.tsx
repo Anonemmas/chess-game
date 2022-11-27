@@ -24,7 +24,7 @@ export default function JoinedGameComponent({
         )}
         <div className="opponent flex justify-between ">
           <div className="user flex items-center gap-4">
-            <div className="bg-[#383531] w-fit h-fit pt-2 px-[6px] pb-0">
+            <div className="bg-[#383531] w-fit h-fit pt-3 px-2 pb-0">
               <User className="w-7 h-7 text-[#BDBDBD]" weight="fill" />
             </div>
             <p>Opponent</p>
@@ -36,7 +36,7 @@ export default function JoinedGameComponent({
         <Board />
         <div className="player1 flex justify-between ">
           <div className="user flex items-center gap-4">
-            <div className="bg-[#383531] w-fit h-fit pt-2 px-[6px] pb-0">
+            <div className="bg-[#383531] w-fit h-fit pt-3 px-2 pb-0">
               <User className="w-7 h-7 text-[#BDBDBD]" weight="fill" />
             </div>
             <p>{isSpectator ? "Opponent 1" : "My Avatar"}</p>
