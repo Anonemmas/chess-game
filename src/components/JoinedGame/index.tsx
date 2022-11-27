@@ -2,7 +2,11 @@ import Link from "next/link";
 import { CaretLeft, User } from "phosphor-react";
 import Board from "./Board";
 
-export default function JoinedGameComponent() {
+export default function JoinedGameComponent({
+  isSpectator,
+}: {
+  isSpectator?: boolean;
+}) {
   return (
     <div className="flex relative text-white mt-[4%] justify-center">
       <Link
@@ -13,6 +17,11 @@ export default function JoinedGameComponent() {
         Go Back
       </Link>
       <div className="board-container flex flex-col gap-6 justify-self-center min-w-[662px]">
+        {isSpectator && (
+          <p className="text-2xl text-white font-bold self-center mr-6 pb-2">
+            SPECTATING
+          </p>
+        )}
         <div className="opponent flex justify-between ">
           <div className="user flex items-center gap-4">
             <div className="bg-[#383531] w-fit h-fit pt-2 px-[6px] pb-0">
@@ -30,7 +39,7 @@ export default function JoinedGameComponent() {
             <div className="bg-[#383531] w-fit h-fit pt-2 px-[6px] pb-0">
               <User className="w-7 h-7 text-[#BDBDBD]" weight="fill" />
             </div>
-            <p>My Avatar</p>
+            <p>{isSpectator ? "Opponent 1" : "My Avatar"}</p>
           </div>
           <p className="rounded-md bg-[#383531] px-4 flex items-center">
             00:00:00

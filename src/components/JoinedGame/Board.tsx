@@ -82,7 +82,7 @@ export default function Board() {
           </div>
         ))}
       </div>
-      <div className="black absolute bottom-0 z-10 grid grid-cols-8 grid-rows-8 items-center justify-center inset-0">
+      <div className="black absolute bottom-0 grid grid-cols-8 grid-rows-8 items-center justify-center inset-0">
         {[
           BlackRook,
           BlackKnight,
