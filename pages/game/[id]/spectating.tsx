@@ -10,7 +10,7 @@ export default function JoinedGame({ user }: { user: User }) {
     <Layout theme="dark">
       <NextCustomHead title="LIVE • CHESS GAMES" />
       <Nav theme="dark" address={user?.address} />
-      <JoinedGameComponent />
+      <JoinedGameComponent isSpectator />
     </Layout>
   );
 }

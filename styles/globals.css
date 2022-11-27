@@ -19,6 +19,39 @@ a {
   box-sizing: border-box;
 }
 
+.animation {
+  animation: fadeIn 2s ease-in-out 0s infinite forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    left: -5%;
+  }
+  25% {
+    left: 25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .animation {
+    animation: fadeIn 2.5s ease-in-out 0s infinite forwards;
+  }
+  @keyframes fadeIn {
+    0% {
+      left: -20%;
+    }
+    40% {
+      left: 40%;
+      width: 10rem;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
+
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;

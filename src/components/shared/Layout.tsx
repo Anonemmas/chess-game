@@ -13,7 +13,7 @@ export default function Layout({
         theme === "light" ? "bg-white" : theme === "dark" ? "bg-dark" : "white"
       }`}
     >
-      <div className={`h-full w-[85%] mx-primary mt-[25px] `}>{children}</div>
+      <div className={`h-full w-[85%] mx-auto mt-[25px] `}>{children}</div>
     </div>
   );
 }
