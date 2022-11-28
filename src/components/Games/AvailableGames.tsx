@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AvailableGames() {
   return (
     <>
-      <div className="grid grid-cols-7 font-semibold bg-white gap-y-4 gap-x-6 text-sm p-10">
+      <div className="grid grid-cols-7 font-semibold min-w-[1070px] bg-white gap-y-4 gap-x-6 text-sm p-10">
         <>
           {tableHeaders.map((header) => (
             <div key={header} className="col-span-1 last:col-span-2 pb-2">

@@ -52,6 +52,11 @@ a {
   }
 }
 
+.light {
+  background: url("../src/assets/background.png");
+  background-position-y: center;
+}
+
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;

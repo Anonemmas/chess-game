@@ -18,7 +18,7 @@ export default function CreateRoom() {
     <>
       <button
         onClick={onOpen}
-        className="bg-primary-blue rounded-lg flex items-center px-3 font-semibold py-2 gap-2 text-sm text-white"
+        className="bg-primary-blue min-w-[179px] w-fit rounded-lg flex items-center px-3 font-semibold py-2 gap-2 text-sm text-white"
       >
         <Plus className="w-4 h-4 text-white" weight="bold" />
         Create New Room

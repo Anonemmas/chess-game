@@ -12,9 +12,9 @@ export default function Nav({
   return (
     <div className="flex justify-between border-b pb-4 text-sm">
       <Link
-        className={`uppercase font-bold text-lg  ${
+        className={`uppercase font-bold sm:text-lg  ${
           theme === "dark" ? "text-white" : "text-black"
-        } flex items-center gap-2`}
+        } flex items-center sm:gap-2`}
         href={!address ? "/" : "/games"}
       >
         Chess{" "}
@@ -22,12 +22,12 @@ export default function Nav({
         Games
       </Link>
       {address && (
-        <div className="status flex items-center font-semibold">
-          <p className="balance flex items-center rounded-l-md text-white bg-primary-blue px-3 py-2">
+        <div className="status flex items-center font-semibold" title={address}>
+          <p className="balance hidden sm:flex items-center rounded-l-md text-white bg-primary-blue px-3 py-2">
             0.04 ETH
           </p>
           <p
-            className={`address flex items-center rounded-r-md font-semibold ${
+            className={`address flex items-center rounded-md sm:rounded-none sm:rounded-r-md font-semibold ${
               theme === "dark"
                 ? "bg-[#4E4D4B] text-white"
                 : "bg-white text-black"

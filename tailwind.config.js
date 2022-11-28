@@ -17,6 +17,9 @@ module.exports = {
         "chess-gray": "#E1E1E1",
         dark: "#262522",
       },
+      transformOrigin: {
+        "top-left-center-2vw": "center 30vw",
+      },
     },
   },
   plugins: [require(`@tailwindcss/typography`)],

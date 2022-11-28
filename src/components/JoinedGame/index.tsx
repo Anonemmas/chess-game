@@ -16,7 +16,7 @@ export default function JoinedGameComponent({
         <CaretLeft className="w-4 h-4 mt-[2px] group-hover:-translate-x-2 ease-in-out duration-300" />
         Go Back
       </Link>
-      <div className="board-container flex flex-col gap-6 justify-self-center min-w-[662px]">
+      <div className="board-container scale-50 origin-top-left-center-2vw sm:scale-75 lg:scale-100 flex flex-col gap-6 justify-self-center min-w-[662px]">
         {isSpectator && (
           <p className="text-2xl text-white font-bold self-center mr-6 pb-2">
             SPECTATING
